@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -19,19 +18,6 @@ const Hero = () => {
           <p className="text-xl text-white/90 mb-8">
             Specializing in high-quality garments, cosmetics, and household accessories since 2020.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" className="btn-primary">
-              Contact Us
-            </Link>
-            <a 
-              href="https://wa.me/971508599679?text=Hello%2C%20I%20am%20interested%20in%20your%20products!" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              WhatsApp Us
-            </a>
-          </div>
         </div>
       </div>
       

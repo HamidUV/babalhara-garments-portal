@@ -59,39 +59,39 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation - Improved styling */}
+      {/* Mobile Navigation - Enhanced styling */}
       <div 
         className={cn(
-          "fixed inset-0 bg-white/98 z-40 transition-transform duration-300 transform lg:hidden",
+          "fixed inset-0 bg-gradient-to-b from-gold/10 to-white z-40 transition-transform duration-300 transform lg:hidden",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
         style={{ top: scrolled ? '57px' : '73px' }}
       >
-        <nav className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+        <nav className="flex flex-col items-center justify-center h-full space-y-8 p-4">
           <Link 
             to="/" 
-            className="font-medium link-hover" 
+            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-white/80 shadow-sm w-full text-center" 
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link 
             to="/about" 
-            className="font-medium link-hover" 
+            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-white/80 shadow-sm w-full text-center" 
             onClick={() => setIsMenuOpen(false)}
           >
             About Us
           </Link>
           <Link 
             to="/products" 
-            className="font-medium link-hover" 
+            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-white/80 shadow-sm w-full text-center" 
             onClick={() => setIsMenuOpen(false)}
           >
             Products
           </Link>
           <Link 
             to="/contact" 
-            className="font-medium link-hover" 
+            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-white/80 shadow-sm w-full text-center" 
             onClick={() => setIsMenuOpen(false)}
           >
             Contact

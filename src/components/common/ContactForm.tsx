@@ -48,7 +48,7 @@ const ContactForm = () => {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent shadow-sm"
           placeholder="Your name"
         />
       </div>
@@ -64,7 +64,7 @@ const ContactForm = () => {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent shadow-sm"
           placeholder="your.email@example.com"
         />
       </div>
@@ -80,7 +80,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           rows={5}
-          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent shadow-sm"
           placeholder="Your message here..."
         />
       </div>
@@ -88,7 +88,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full btn-primary flex items-center justify-center"
+        className="w-full btn-primary flex items-center justify-center shadow-md hover:shadow-lg transition-all"
       >
         {isSubmitting ? (
           <>

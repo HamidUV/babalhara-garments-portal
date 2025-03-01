@@ -45,15 +45,8 @@ const Navbar = () => {
         <nav className="hidden lg:flex items-center space-x-8">
           <Link to="/" className="font-medium link-hover">Home</Link>
           <Link to="/about" className="font-medium link-hover">About Us</Link>
+          <Link to="/products" className="font-medium link-hover">Products</Link>
           <Link to="/contact" className="font-medium link-hover">Contact</Link>
-          <a 
-            href="https://wa.me/971508599679?text=Hello%2C%20I%20am%20interested%20in%20your%20products!" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn-primary animate-fade-in"
-          >
-            WhatsApp Us
-          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -90,21 +83,19 @@ const Navbar = () => {
             About Us
           </Link>
           <Link 
+            to="/products" 
+            className="font-medium link-hover" 
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Products
+          </Link>
+          <Link 
             to="/contact" 
             className="font-medium link-hover" 
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
           </Link>
-          <a 
-            href="https://wa.me/971508599679?text=Hello%2C%20I%20am%20interested%20in%20your%20products!" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn-primary"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            WhatsApp Us
-          </a>
         </nav>
       </div>
     </header>

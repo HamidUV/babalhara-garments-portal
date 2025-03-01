@@ -1,17 +1,18 @@
 
 import React from 'react';
+import { PhoneCall } from 'lucide-react';
 
 const ContactHero = () => {
   return (
-    <section className="bg-gray-50 py-20 md:py-28">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-28">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-block px-4 py-1 bg-gold/90 text-white text-sm font-medium rounded-full mb-6">
-            Get In Touch
-          </span>
-          <h1 className="h1 mb-6">Contact Us</h1>
-          <p className="text-xl text-gray-600">
-            Have questions about our products or services? We're here to help. Reach out to us through any of the channels below.
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mb-6">
+            <PhoneCall size={28} />
+          </div>
+          <h1 className="h1 mb-6">Get In Touch With Us</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Have questions about our wholesale products or services? We're here to help you find the perfect solutions for your business needs.
           </p>
         </div>
       </div>

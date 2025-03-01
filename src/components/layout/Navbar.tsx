@@ -49,9 +49,9 @@ const Navbar = () => {
           <Link to="/contact" className="font-medium link-hover">Contact</Link>
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Menu Toggle - Improved styling */}
         <button 
-          className="lg:hidden text-gold"
+          className="lg:hidden text-gold p-2 rounded-md hover:bg-gold-light/30 transition-colors"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -59,13 +59,13 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Improved styling */}
       <div 
         className={cn(
-          "fixed inset-0 bg-white z-40 transition-transform duration-300 transform lg:hidden",
+          "fixed inset-0 bg-white/98 z-40 transition-transform duration-300 transform lg:hidden",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
-        style={{ top: '60px' }}
+        style={{ top: scrolled ? '57px' : '73px' }}
       >
         <nav className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
           <Link 

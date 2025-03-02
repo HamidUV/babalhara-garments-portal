@@ -12,7 +12,7 @@ const ContactInfo = () => {
           <SectionTitle
             title="Get In Touch"
             subtitle="We'd love to hear from you"
-            center
+            center={true}
           />
         </div>
         

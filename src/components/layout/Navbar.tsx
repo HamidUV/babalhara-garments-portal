@@ -95,12 +95,12 @@ const Navbar = () => {
       {/* Mobile Navigation - Improved with solid background */}
       <div 
         className={cn(
-          "fixed inset-0 bg-white z-40 transition-transform duration-300 transform lg:hidden shadow-lg",
+          "fixed inset-0 bg-[#eee] z-40 transition-transform duration-300 transform lg:hidden shadow-lg",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
         style={{ top: scrolled ? '57px' : '73px' }}
       >
-        <nav className="flex flex-col items-center justify-center h-full p-6 bg-gold-light/20">
+        <nav className="flex flex-col items-center justify-center h-full p-6">
           {[
             { to: "/", label: "Home" },
             { to: "/about", label: "About Us" },

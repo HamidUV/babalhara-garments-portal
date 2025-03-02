@@ -9,21 +9,21 @@ const CompanyInfo = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <SectionTitle
-              title="About Our Company"
-              subtitle="A leader in wholesale trading based in Dubai since 2020"
+              title="Our Company"
+              subtitle="Excellence in wholesale trading"
             />
             
             <div className="space-y-6 text-gray-600">
               <p>
-                Established in 2020, Bab AlHara Readymade Garments Trading LLC has quickly emerged as a reliable wholesale trading company in Dubai's vibrant commercial district of Deira, Naif. We specialize in supplying a diverse range of high-quality products including garments, cosmetics, household accessories, and FMCG.
+                At Bab AlHara, we specialize in providing a diverse selection of premium products to businesses throughout the UAE and beyond. Our strategic location in Dubai's commercial heart positions us perfectly to serve the region's dynamic market needs.
               </p>
               
               <p>
-                Our business operations are built on strong import partnerships with Japan, Thailand, India, Korea, and China, allowing us to offer a unique selection of products that meet international quality standards. These strategic relationships enable us to provide our customers with exclusive items that stand out in the market.
+                What sets us apart is our carefully cultivated network of international suppliers, allowing us to offer unique products that help our clients gain a competitive edge. Our business relationships extend across Asia, including Japan, Thailand, India, Korea, and China.
               </p>
               
               <p>
-                At Bab AlHara, we believe in the values of trust, reliability, and quality. Our team is dedicated to maintaining the highest standards in every aspect of our business, from product sourcing to customer service. We understand that our success is directly linked to the success of our clients, which is why we go the extra mile to ensure satisfaction.
+                Our team is dedicated to understanding your business challenges and finding the right product solutions to help you succeed. We believe that our success is measured by the success of our clients, which is why we go beyond simply supplying products to become a trusted advisor and partner.
               </p>
             </div>
           </div>
@@ -31,8 +31,8 @@ const CompanyInfo = () => {
           <div className="order-1 md:order-2 relative animate-zoom-in">
             <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
-                alt="Bab AlHara Office" 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80" 
+                alt="Bab AlHara Modern Business" 
                 className="w-full h-full object-cover"
               />
             </div>

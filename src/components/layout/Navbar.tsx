@@ -82,7 +82,7 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Mobile Menu Toggle - Improved styling */}
+        {/* Mobile Menu Toggle */}
         <button 
           className="lg:hidden text-gold p-2 rounded-md hover:bg-gold-light/30 transition-colors"
           onClick={toggleMenu}
@@ -92,15 +92,15 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation - Single background color and improved hover effects */}
+      {/* Mobile Navigation - Improved with solid background */}
       <div 
         className={cn(
-          "fixed inset-0 bg-white/95 z-40 transition-transform duration-300 transform lg:hidden shadow-lg",
+          "fixed inset-0 bg-white z-40 transition-transform duration-300 transform lg:hidden shadow-lg",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
         style={{ top: scrolled ? '57px' : '73px' }}
       >
-        <nav className="flex flex-col items-center justify-center h-full p-6 bg-gold-light/10">
+        <nav className="flex flex-col items-center justify-center h-full p-6 bg-gold-light/20">
           {[
             { to: "/", label: "Home" },
             { to: "/about", label: "About Us" },
@@ -111,10 +111,10 @@ const Navbar = () => {
               key={index}
               to={item.to} 
               className={cn(
-                "font-medium text-xl w-full text-center py-4 mb-4 border-b border-gold/10 transition-all",
+                "font-medium text-xl w-full text-center py-4 mb-4 transition-all hover:bg-gold-light/40",
                 location.pathname === item.to 
-                  ? "text-gold-dark font-semibold" 
-                  : "text-gold hover:text-gold-dark hover:bg-gold-light/30"
+                  ? "text-gold-dark font-semibold bg-gold-light/30" 
+                  : "text-gold-dark"
               )}
               onClick={() => setIsMenuOpen(false)}
             >

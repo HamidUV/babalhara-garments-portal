@@ -50,13 +50,15 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="section bg-gray-50">
+    <section className="py-8 md:py-12 bg-gray-50">
       <div className="container-custom">
-        <SectionTitle
-          title="Why Choose Us"
-          subtitle="Discover the advantages of partnering with Bab AlHara Trading"
-          center
-        />
+        <div className="text-center mx-auto max-w-3xl mb-10">
+          <SectionTitle
+            title="Why Choose Us"
+            subtitle="Discover the advantages of partnering with Bab AlHara Trading"
+            center
+          />
+        </div>
         
         <div className="grid md:grid-cols-2 gap-8">
           {reasons.map((reason, index) => (
@@ -76,15 +78,13 @@ const WhyChooseUs = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-gold/10 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between animate-slide-up">
+        <div className="mt-12 bg-gold/10 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between animate-slide-up">
           <div className="mb-6 md:mb-0">
             <h3 className="font-serif text-2xl font-semibold mb-2">Ready to start a partnership?</h3>
             <p className="text-gray-700">Reach out to discuss your wholesale needs.</p>
           </div>
           <a 
-            href="https://wa.me/971508599679?text=Hello%2C%20I%20am%20interested%20in%20a%20partnership!" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="/contact" 
             className="btn-primary whitespace-nowrap"
           >
             Contact Us Now

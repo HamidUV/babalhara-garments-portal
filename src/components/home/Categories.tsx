@@ -5,13 +5,15 @@ import CategoryCard from '../common/CategoryCard';
 
 const Categories = () => {
   return (
-    <section className="section">
+    <section className="py-8 md:py-12">
       <div className="container-custom">
-        <SectionTitle
-          title="Our Product Categories"
-          subtitle="Explore our diverse range of high-quality products"
-          center
-        />
+        <div className="text-center mx-auto max-w-3xl mb-10">
+          <SectionTitle
+            title="Our Product Categories"
+            subtitle="Explore our diverse range of high-quality products"
+            center
+          />
+        </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <CategoryCard 
@@ -48,14 +50,12 @@ const Categories = () => {
           />
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <a 
-            href="https://wa.me/971508599679?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20products!" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="/products" 
             className="btn-primary inline-flex items-center"
           >
-            <span>Inquire About Our Products</span>
+            <span>View All Products</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />

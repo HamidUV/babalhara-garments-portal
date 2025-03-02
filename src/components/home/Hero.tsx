@@ -9,13 +9,10 @@ const Hero = () => {
       
       <div className="container-custom relative z-10 mt-[-50px]">
         <div className="max-w-xl animate-fade-in">
-          <span className="inline-block px-4 py-1 bg-gold/90 text-white text-sm font-medium rounded-full mb-6">
-            Premium Garments & Trading
-          </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
             Bab AlHara Readymade Garments Trading
           </h1>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90">
             Specializing in high-quality garments, cosmetics, and household accessories since 2020.
           </p>
         </div>

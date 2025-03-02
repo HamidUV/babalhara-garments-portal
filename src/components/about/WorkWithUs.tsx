@@ -51,15 +51,17 @@ const reasons = [
 
 const WorkWithUs = () => {
   return (
-    <section className="section bg-gray-50">
+    <section className="py-8 md:py-12 bg-gray-50">
       <div className="container-custom">
-        <SectionTitle
-          title="Why Work With Us"
-          subtitle="Discover the advantages of partnering with Bab AlHara"
-          center
-        />
+        <div className="text-center mx-auto max-w-3xl mb-10">
+          <SectionTitle
+            title="Why Work With Us"
+            subtitle="Discover the advantages of partnering with Bab AlHara"
+            center
+          />
+        </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 gap-8 mt-8">
           {reasons.map((reason, index) => (
             <div 
               key={index} 
@@ -77,18 +79,16 @@ const WorkWithUs = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-12 text-center">
+        <div className="mt-12 bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-10 text-center">
           <h3 className="font-serif text-2xl font-semibold mb-4">Partner With Us</h3>
           <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-            Whether you're a retailer looking for quality products or a business seeking a reliable wholesale supplier, Bab AlHara is ready to become your trusted partner. Let's work together to grow your business.
+            Whether you're a retailer looking for quality products or a business seeking a reliable wholesale supplier, Bab AlHara is ready to become your trusted partner.
           </p>
           <a 
-            href="https://wa.me/971508599679?text=Hello%2C%20I%20am%20interested%20in%20partnering%20with%20Bab%20AlHara!" 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="/contact" 
             className="btn-primary inline-flex items-center"
           >
-            <span>Start a Conversation</span>
+            <span>Contact Us</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
               <path d="m8 9 4-4 4 4" />
               <path d="M12 5v14" />

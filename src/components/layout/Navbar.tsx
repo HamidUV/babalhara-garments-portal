@@ -1,12 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,10 +44,42 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          <Link to="/" className="font-medium link-hover">Home</Link>
-          <Link to="/about" className="font-medium link-hover">About Us</Link>
-          <Link to="/products" className="font-medium link-hover">Products</Link>
-          <Link to="/contact" className="font-medium link-hover">Contact</Link>
+          <Link 
+            to="/" 
+            className={cn(
+              "font-medium transition-colors",
+              location.pathname === "/" ? "text-gold" : "link-hover"
+            )}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/about" 
+            className={cn(
+              "font-medium transition-colors",
+              location.pathname === "/about" ? "text-gold" : "link-hover"
+            )}
+          >
+            About Us
+          </Link>
+          <Link 
+            to="/products" 
+            className={cn(
+              "font-medium transition-colors",
+              location.pathname === "/products" ? "text-gold" : "link-hover"
+            )}
+          >
+            Products
+          </Link>
+          <Link 
+            to="/contact" 
+            className={cn(
+              "font-medium transition-colors",
+              location.pathname === "/contact" ? "text-gold" : "link-hover"
+            )}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle - Improved styling */}
@@ -59,7 +92,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation - Enhanced styling with matching background */}
+      {/* Mobile Navigation - Single background color and improved hover effects */}
       <div 
         className={cn(
           "fixed inset-0 bg-white/95 z-40 transition-transform duration-300 transform lg:hidden shadow-lg",
@@ -67,35 +100,27 @@ const Navbar = () => {
         )}
         style={{ top: scrolled ? '57px' : '73px' }}
       >
-        <nav className="flex flex-col items-center justify-center h-full space-y-6 p-6">
-          <Link 
-            to="/" 
-            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-gold-light/50 shadow-sm w-full text-center" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link 
-            to="/about" 
-            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-gold-light/50 shadow-sm w-full text-center" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About Us
-          </Link>
-          <Link 
-            to="/products" 
-            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-gold-light/50 shadow-sm w-full text-center" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Products
-          </Link>
-          <Link 
-            to="/contact" 
-            className="font-medium text-xl text-gold hover:text-gold-dark transition-colors py-3 px-6 rounded-md bg-gold-light/50 shadow-sm w-full text-center" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </Link>
+        <nav className="flex flex-col items-center justify-center h-full p-6 bg-gold-light/10">
+          {[
+            { to: "/", label: "Home" },
+            { to: "/about", label: "About Us" },
+            { to: "/products", label: "Products" },
+            { to: "/contact", label: "Contact" }
+          ].map((item, index) => (
+            <Link 
+              key={index}
+              to={item.to} 
+              className={cn(
+                "font-medium text-xl w-full text-center py-4 mb-4 border-b border-gold/10 transition-all",
+                location.pathname === item.to 
+                  ? "text-gold-dark font-semibold" 
+                  : "text-gold hover:text-gold-dark hover:bg-gold-light/30"
+              )}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>

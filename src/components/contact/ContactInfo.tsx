@@ -2,19 +2,23 @@
 import React from 'react';
 import ContactForm from '../common/ContactForm';
 import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import SectionTitle from '../common/SectionTitle';
 
 const ContactInfo = () => {
   return (
-    <section className="section">
+    <section className="section py-16" id="contact-section">
       <div className="container-custom">
+        <div className="text-center mb-12">
+          <SectionTitle
+            title="Get In Touch"
+            subtitle="We'd love to hear from you"
+            center
+          />
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Details */}
           <div className="space-y-8">
-            <div>
-              <h2 className="h3 mb-2">Our Contact Information</h2>
-              <div className="w-20 h-1 bg-gold rounded"></div>
-            </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 duration-300">
                 <div className="flex items-center mb-4">

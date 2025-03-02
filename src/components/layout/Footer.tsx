@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Instagram, Linkedin, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-100">
       <div className="container-custom py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           {/* Company Info */}
           <div className="text-center md:text-left">
             <h3 className="font-serif text-xl font-semibold text-gold">Bab AlHara</h3>
@@ -18,24 +17,16 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Contact Info */}
-          <div className="text-center text-sm text-gray-600">
-            <p className="mb-2">Naif Deira, Dubai</p>
-            <p className="mb-2">babalhara.dubai@gmail.com</p>
-            <p>+971 50 859 9679</p>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex flex-col md:items-end items-center space-y-4">
-            <div className="flex space-x-5">
-              <Link to="/" className="text-gray-600 hover:text-gold transition-colors">Home</Link>
-              <Link to="/about" className="text-gray-600 hover:text-gold transition-colors">About</Link>
-              <Link to="/products" className="text-gray-600 hover:text-gold transition-colors">Products</Link>
-              <Link to="/contact" className="text-gray-600 hover:text-gold transition-colors">Contact</Link>
+          {/* Contact Info & Social Media */}
+          <div className="text-center md:text-right">
+            <div className="text-sm text-gray-600 mb-4">
+              <p className="mb-2">Naif Deira, Dubai</p>
+              <p className="mb-2">babalhara.dubai@gmail.com</p>
+              <p>+971 50 859 9679</p>
             </div>
             
             {/* Social Media */}
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4 mt-4 justify-center md:justify-end">
               <a 
                 href="https://www.linkedin.com/" 
                 target="_blank" 

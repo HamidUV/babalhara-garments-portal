@@ -24,9 +24,17 @@ const ContactForm = () => {
 
     // Simulate form submission
     try {
+      // This is where you would normally send the form data to a backend service
+      // For example, you could use EmailJS, Formspree, or your own API endpoint
+      
+      // Email that would receive the contact form submission: hamid.codehub@gmail.com
       await new Promise((resolve) => setTimeout(resolve, 1500));
+      
       toast.success('Your message has been sent successfully!');
       setFormData({ name: '', email: '', message: '' });
+      
+      console.log('Form would be sent to: hamid.codehub@gmail.com');
+      console.log('Form data:', formData);
     } catch (error) {
       toast.error('Failed to send your message. Please try again.');
       console.error('Form submission error:', error);

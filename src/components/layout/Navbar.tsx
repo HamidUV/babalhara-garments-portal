@@ -47,7 +47,7 @@ const Navbar = () => {
           <Link 
             to="/" 
             className={cn(
-              "font-medium transition-colors",
+              "font-medium transition-colors hover:bg-gold-light/60 px-4 py-2 rounded-md",
               location.pathname === "/" ? "text-gold" : "link-hover"
             )}
           >
@@ -56,7 +56,7 @@ const Navbar = () => {
           <Link 
             to="/about" 
             className={cn(
-              "font-medium transition-colors",
+              "font-medium transition-colors hover:bg-gold-light/60 px-4 py-2 rounded-md",
               location.pathname === "/about" ? "text-gold" : "link-hover"
             )}
           >
@@ -65,7 +65,7 @@ const Navbar = () => {
           <Link 
             to="/products" 
             className={cn(
-              "font-medium transition-colors",
+              "font-medium transition-colors hover:bg-gold-light/60 px-4 py-2 rounded-md",
               location.pathname === "/products" ? "text-gold" : "link-hover"
             )}
           >
@@ -74,7 +74,7 @@ const Navbar = () => {
           <Link 
             to="/contact" 
             className={cn(
-              "font-medium transition-colors",
+              "font-medium transition-colors hover:bg-gold-light/60 px-4 py-2 rounded-md",
               location.pathname === "/contact" ? "text-gold" : "link-hover"
             )}
           >
@@ -111,7 +111,7 @@ const Navbar = () => {
               key={index}
               to={item.to} 
               className={cn(
-                "font-medium text-xl w-full text-center py-4 mb-4 transition-all hover:bg-gold-light/40",
+                "font-medium text-xl w-full text-center py-4 mb-4 transition-all hover:bg-gold-light/60",
                 location.pathname === item.to 
                   ? "text-gold-dark font-semibold bg-gold-light/30" 
                   : "text-gold-dark"

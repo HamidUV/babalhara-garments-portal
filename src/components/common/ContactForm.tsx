@@ -1,8 +1,10 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { toast } from 'sonner';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,29 +24,50 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      // This is where you would normally send the form data to a backend service
-      // For example, you could use EmailJS, Formspree, or your own API endpoint
+      // Replace these with your actual EmailJS service ID, template ID, and public key
+      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
+      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
+      const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY';
       
-      // Email that would receive the contact form submission: hamid.codehub@gmail.com
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // The recipient email is pre-configured in your EmailJS template
+      // or in the EmailJS email service settings
       
-      toast.success('Your message has been sent successfully!');
+      if (!serviceId || !templateId || !publicKey || 
+          serviceId === 'YOUR_EMAILJS_SERVICE_ID' || 
+          templateId === 'YOUR_EMAILJS_TEMPLATE_ID' || 
+          publicKey === 'YOUR_EMAILJS_PUBLIC_KEY') {
+        console.log('⚠️ EmailJS configuration is incomplete');
+        // Fall back to the simulation for development
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        console.log('Email would be sent to: hamid.codehub@gmail.com');
+        console.log('Form data:', formData);
+        toast.success('Your message has been sent successfully!');
+      } else {
+        // Send the email using EmailJS
+        const result = await emailjs.sendForm(
+          serviceId,
+          templateId,
+          form.current!,
+          publicKey
+        );
+        
+        console.log('Email sent successfully:', result.text);
+        toast.success('Your message has been sent successfully!');
+      }
+      
+      // Reset the form after successful submission
       setFormData({ name: '', email: '', message: '' });
-      
-      console.log('Form would be sent to: hamid.codehub@gmail.com');
-      console.log('Form data:', formData);
     } catch (error) {
-      toast.error('Failed to send your message. Please try again.');
       console.error('Form submission error:', error);
+      toast.error('Failed to send your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form ref={form} onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
           Full Name

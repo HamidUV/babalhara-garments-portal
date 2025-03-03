@@ -25,36 +25,24 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace these with your actual EmailJS service ID, template ID, and public key
-      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
-      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
-      const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY';
+      // EmailJS configuration with the provided credentials
+      const serviceId = 'service_kuonb18';
+      const templateId = 'template_qjbdxzp';
+      const publicKey = '1mqDYPzSdF4hKGmK9';
       
       // The recipient email is pre-configured in your EmailJS template
-      // or in the EmailJS email service settings
+      // or in the EmailJS email service settings (eatechistory.hamid@gmail.com)
       
-      if (!serviceId || !templateId || !publicKey || 
-          serviceId === 'YOUR_EMAILJS_SERVICE_ID' || 
-          templateId === 'YOUR_EMAILJS_TEMPLATE_ID' || 
-          publicKey === 'YOUR_EMAILJS_PUBLIC_KEY') {
-        console.log('⚠️ EmailJS configuration is incomplete');
-        // Fall back to the simulation for development
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        console.log('Email would be sent to: hamid.codehub@gmail.com');
-        console.log('Form data:', formData);
-        toast.success('Your message has been sent successfully!');
-      } else {
-        // Send the email using EmailJS
-        const result = await emailjs.sendForm(
-          serviceId,
-          templateId,
-          form.current!,
-          publicKey
-        );
-        
-        console.log('Email sent successfully:', result.text);
-        toast.success('Your message has been sent successfully!');
-      }
+      // Send the email using EmailJS
+      const result = await emailjs.sendForm(
+        serviceId,
+        templateId,
+        form.current!,
+        publicKey
+      );
+      
+      console.log('Email sent successfully:', result.text);
+      toast.success('Your message has been sent successfully!');
       
       // Reset the form after successful submission
       setFormData({ name: '', email: '', message: '' });

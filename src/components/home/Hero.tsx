@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="container-custom relative z-10 mt-[-50px]">
         <div className="max-w-xl animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
-            Bab AlHara Readymade Garments Trading
+            Bab AlHara Readymade Garments Trading LLC
           </h1>
           <p className="text-xl text-white/90">
             Specializing in high-quality garments, cosmetics, and household accessories since 2020.

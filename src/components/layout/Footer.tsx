@@ -13,14 +13,23 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="font-serif text-xl font-semibold text-gold">Bab AlHara</h3>
             <p className="text-gray-600 text-sm mt-1">
-              Wholesale trading in Dubai
+              UAE | QATAR
             </p>
+            
+            <div className="mt-4">
+              <h4 className="font-serif text-sm font-semibold text-gray-700">Logistic Partner:</h4>
+              <p className="text-gray-600 text-sm">
+                Maxco Import & Exports Ltd
+              </p>
+              <p className="text-gray-600 text-sm">
+                YIWU | GUANGZHOU | THAILAND | HONGKONG
+              </p>
+            </div>
           </div>
 
           {/* Contact Info & Social Media */}
           <div className="text-center md:text-right">
             <div className="text-sm text-gray-600 mb-4">
-              <p className="mb-2">Naif Deira, Dubai</p>
               <p className="mb-2">babalhara.dubai@gmail.com</p>
               <p>+971 50 859 9679</p>
             </div>

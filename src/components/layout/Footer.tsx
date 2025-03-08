@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram, Linkedin, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -22,74 +21,19 @@ const Footer = () => {
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Company Info */}
-          <div className="space-y-6">
-            <div className="border-l-4 border-gold pl-4">
-              <h3 className="font-serif text-2xl font-semibold text-white mb-2">Bab AlHara</h3>
-              <p className="text-gray-300 font-medium">
-                UAE | QATAR
-              </p>
-            </div>
-            
-            <div className="pt-4 border-t border-gray-700">
-              <h4 className="font-serif text-md font-semibold text-gray-300 mb-3">Logistic Partner:</h4>
-              <p className="text-gray-400">
-                Maxco Import & Exports Ltd
-              </p>
-              <p className="text-gray-400 italic">
-                YIWU | GUANGZHOU | THAILAND | HONGKONG
-              </p>
-            </div>
-          </div>
-
-          {/* Useful Links */}
-          <div className="space-y-6">
-            <h4 className="font-serif text-xl font-semibold text-white mb-4 border-b border-gold pb-2 inline-block">
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="/" className="text-gray-300 hover:text-gold flex items-center transition-colors">
-                  <ExternalLink size={14} className="mr-2" />
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-gray-300 hover:text-gold flex items-center transition-colors">
-                  <ExternalLink size={14} className="mr-2" />
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/products" className="text-gray-300 hover:text-gold flex items-center transition-colors">
-                  <ExternalLink size={14} className="mr-2" />
-                  Our Products
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-300 hover:text-gold flex items-center transition-colors">
-                  <ExternalLink size={14} className="mr-2" />
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+          <div className="text-center md:text-left">
+            <h3 className="font-serif text-xl font-semibold text-gold">Bab AlHara</h3>
+            <p className="text-gray-600 text-sm mt-1">
+              Wholesale trading in Dubai
+            </p>
           </div>
 
           {/* Contact Info & Social Media */}
-          <div className="space-y-6">
-            <h4 className="font-serif text-xl font-semibold text-white mb-4 border-b border-gold pb-2 inline-block">Contact Us</h4>
-            <div className="space-y-4">
-              <div className="flex items-center text-gray-300 hover:text-gold group transition-colors">
-                <Mail size={18} className="mr-3 text-gold group-hover:animate-pulse" />
-                <a href="mailto:babalhara.dubai@gmail.com" className="hover:text-gold transition-colors">
-                  babalhara.dubai@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center text-gray-300 hover:text-gold group transition-colors">
-                <Phone size={18} className="mr-3 text-gold group-hover:animate-pulse" />
-                <a href="tel:+971508599679" className="hover:text-gold transition-colors">
-                  +971 50 859 9679
-                </a>
-              </div>
+          <div className="text-center md:text-right">
+            <div className="text-sm text-gray-600 mb-4">
+              <p className="mb-2">Naif Deira, Dubai</p>
+              <p className="mb-2">babalhara.dubai@gmail.com</p>
+              <p>+971 50 859 9679</p>
             </div>
             
             {/* Social Media */}

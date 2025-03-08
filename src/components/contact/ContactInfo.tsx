@@ -8,13 +8,13 @@ const ContactInfo = () => {
   return (
     <section className="section py-16" id="contact-section">
       <div className="container-custom">
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <SectionTitle
             title="Get In Touch"
             subtitle="We'd love to hear from you"
             center={true}
           />
-        </div>
+        </div> */}
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Details */}
@@ -67,10 +67,11 @@ const ContactInfo = () => {
                 </a>
               </div>
             </div>
+
             
             <div className="mt-8 rounded-xl overflow-hidden h-[320px] shadow-md border border-gray-200">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.101783906461!2d55.29983057557165!3d25.271658077775373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5ccf30bc59df%3A0x8fa2887215cc9bca!2sNaif%2C%20Dubai!5e0!3m2!1sen!2sae!4v1652345678901!5m2!1sen!2sae" 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3607.934879394627!2d55.30845307538429!3d25.272775977662292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE2JzIyLjAiTiA1NcKwMTgnMzkuNyJF!5e0!3m2!1sen!2sin!4v1740996148213!5m2!1sen!2sin" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

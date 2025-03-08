@@ -13,6 +13,7 @@ const AboutHero = () => {
         </div>
       </div>
     </section>
+
   );
 };
 

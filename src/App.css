@@ -1,23 +1,28 @@
+/* Mobile-first styles */
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
+/* Logo adjustments */
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 4em;
+  padding: 1em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 1.5em #646cffaa);
 }
 
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em #61dafbaa);
+}
+
+/* Logo animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +32,64 @@
   }
 }
 
+/* Disable animation for users who prefer reduced motion */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: logo-spin infinite 10s linear;
   }
 }
 
+/* Card styles */
 .card {
-  padding: 2em;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
+/* Typography */
 .read-the-docs {
-  color: #888;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsive Layout - Tablet */
+@media (min-width: 768px) {
+  #root {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .logo {
+    height: 5em;
+    padding: 1.5em;
+  }
+
+  .card {
+    padding: 2em;
+  }
+
+  .read-the-docs {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Layout - Desktop */
+@media (min-width: 1024px) {
+  #root {
+    max-width: 1280px;
+    padding: 3rem;
+  }
+
+  .logo {
+    height: 6em;
+  }
+
+  .card {
+    padding: 2.5em;
+  }
+
+  .read-the-docs {
+    font-size: 1.3rem;
+  }
 }

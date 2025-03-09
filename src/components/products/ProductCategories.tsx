@@ -7,7 +7,7 @@ const productCategories = [
     title: "Garments",
     image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=600&q=80",
     description: "High-quality readymade garments for all ages and occasions, including traditional and modern clothing options.",
-    items: ["Men's Clothing", "Women's Apparel", "Children's Wear", "Casual Attire", "Formal Wear"]
+    items: ["Men's Clothing", "Women's Apparel","Unisex Garments", "Children's Wear", "Casual Attire", "Formal Wear"]
   },
   {
     title: "Cosmetics",

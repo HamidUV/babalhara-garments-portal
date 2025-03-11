@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Mail } from 'lucide-react';
+import { Instagram, Facebook, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,6 +8,7 @@ const Footer = () => {
     <footer className="bg-gray-50 border-t border-gray-100">
       <div className="container-custom py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          
           {/* Company Info */}
           <div className="text-center md:text-left">
             <h3 className="font-serif text-xl font-semibold text-gold">Bab AlHara</h3>
@@ -33,19 +34,19 @@ const Footer = () => {
               <p>+971 50 859 9679</p>
             </div>
             
-            {/* Social Media */}
+            {/* Social Media Links */}
             <div className="flex space-x-4 mt-4 justify-center md:justify-end">
               <a 
-                href="https://www.linkedin.com/" 
+                href="https://www.facebook.com/share/1BKW7KGRws/?mibextid=wwXIfr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-gold transition-colors bg-gray-100 p-2 rounded-full"
-                aria-label="LinkedIn"
+                aria-label="Facebook"
               >
-                <Linkedin size={18} />
+                <Facebook size={18} />
               </a>
               <a 
-                href="https://www.instagram.com/" 
+                href="https://www.instagram.com/alhara.uae?igsh=MW51NnpleXhmNmN4bg%3D%3D&utm_source=qr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-gold transition-colors bg-gray-100 p-2 rounded-full"
@@ -64,8 +65,21 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Copyright & Developer Credit */}
         <div className="mt-6 pt-4 border-t border-gray-200 text-center text-gray-500 text-sm">
-          <p>© {currentYear} Bab AlHara Readymade Garments Trading LLC. All rights reserved.</p>
+          <p>© {currentYear} Bab AlHara Readymade Garments Trading LLC.</p>
+          <p>All rights reserved.</p>
+          <p className="mt-2 text-xs"> {/* Made text smaller */}
+            Developed by 
+            <a 
+              href="https://www.linkedin.com/in/hamiduv" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 font-medium hover:text-gold transition-colors ml-1"
+            >
+              Hamid U V
+            </a>
+          </p>
         </div>
       </div>
     </footer>

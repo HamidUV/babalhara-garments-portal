@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -15,11 +14,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,61 +24,37 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header 
+    <header
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-sm",
         scrolled ? "bg-white/95 shadow-md py-3" : "bg-white/80 py-5"
       )}
     >
-      <div className="container-custom flex items-center justify-between">
+      <div className="container-custom flex items-center justify-between px-4 lg:px-8">
         <Link to="/" className="flex items-center">
-          <h1 className="font-serif text-2xl font-bold text-gold">
-            Bab AlHara
-          </h1>
+          <h1 className="font-serif text-2xl font-bold text-gold">Bab AlHara</h1>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
-          <Link 
-            to="/" 
-            className={cn(
-              "font-medium transition-colors hover:bg-gold-light hover:bg-opacity-90 px-4 py-2 rounded-md",
-              location.pathname === "/" ? "text-gold" : "link-hover"
-            )}
-          >
-            Home
-          </Link>
-          <Link 
-            to="/about" 
-            className={cn(
-              "font-medium transition-colors hover:bg-gold-light hover:bg-opacity-90 px-4 py-2 rounded-md",
-              location.pathname === "/about" ? "text-gold" : "link-hover"
-            )}
-          >
-            About Us
-          </Link>
-          <Link 
-            to="/products" 
-            className={cn(
-              "font-medium transition-colors hover:bg-gold-light hover:bg-opacity-90 px-4 py-2 rounded-md",
-              location.pathname === "/products" ? "text-gold" : "link-hover"
-            )}
-          >
-            Products
-          </Link>
-          <Link 
-            to="/contact" 
-            className={cn(
-              "font-medium transition-colors hover:bg-gold-light hover:bg-opacity-90 px-4 py-2 rounded-md",
-              location.pathname === "/contact" ? "text-gold" : "link-hover"
-            )}
-          >
-            Contact
-          </Link>
+          {["/", "/about", "/products", "/contact"].map((path, index) => (
+            <Link
+              key={path}
+              to={path}
+              className={cn(
+                "font-medium px-4 py-2 rounded-md transition-all duration-200",
+                location.pathname === path
+                  ? "text-gold bg-gray-200"
+                  : "text-black hover:text-gold hover:bg-gray-100"
+              )}
+            >
+              {['Home', 'About Us', 'Products', 'Contact'][index]}
+            </Link>
+          ))}
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button 
+        {/* Mobile Menu Button */}
+        <button
           className="lg:hidden text-gold p-2 rounded-md hover:bg-gold-light/50 transition-colors"
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -92,33 +63,40 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation - Improved with solid background */}
-      <div 
+      {/* Mobile Navigation */}
+      <div
         className={cn(
-          "fixed inset-0 bg-[#eee] z-40 transition-transform duration-300 transform lg:hidden shadow-lg",
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+          "fixed top-0 left-0 w-full h-screen bg-black/50 backdrop-blur-md z-40 transform transition-transform duration-300 shadow-lg",
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
-        style={{ top: scrolled ? '57px' : '73px' }}
       >
-        <nav className="flex flex-col items-center justify-center h-full p-6">
-          {[
-            { to: "/", label: "Home" },
-            { to: "/about", label: "About Us" },
-            { to: "/products", label: "Products" },
-            { to: "/contact", label: "Contact" }
-          ].map((item, index) => (
-            <Link 
-              key={index}
-              to={item.to} 
+        {/* Close Button */}
+        <div className="flex justify-between items-center p-4 border-b border-gold/40">
+          <h2 className="text-lg font-bold text-gold">Menu</h2>
+          <button
+            className="p-2 text-white hover:text-gold transition"
+            onClick={toggleMenu}
+            aria-label="Close menu"
+          >
+            <X size={28} />
+          </button>
+        </div>
+
+        {/* Menu Items */}
+        <nav className="flex flex-col items-start p-4 space-y-2">
+          {["/", "/about", "/products", "/contact"].map((path, index) => (
+            <Link
+              key={path}
+              to={path}
               className={cn(
-                "font-medium text-xl w-full text-center py-4 mb-4 transition-all hover:bg-gold-light hover:bg-opacity-90",
-                location.pathname === item.to 
-                  ? "text-gold-dark font-semibold bg-gold-light/40" 
-                  : "text-gold-dark"
+                "w-full text-left py-3 px-4 text-lg font-semibold rounded-md transition-all duration-200",
+                location.pathname === path
+                  ? "border-l-4 border-gold/40 bg-black/60 text-gold"
+                  : "text-white hover:text-gold hover:bg-black/30"
               )}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={toggleMenu}
             >
-              {item.label}
+              {['Home', 'About Us', 'Products', 'Contact'][index]}
             </Link>
           ))}
         </nav>

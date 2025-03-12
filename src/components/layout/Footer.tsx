@@ -72,7 +72,7 @@ const Footer = () => {
           <p className="mt-2 text-xs"> {/* Made text smaller */}
             Developed by 
             <a 
-              href="https://www.linkedin.com/in/hamiduv" 
+              href="https://www.instagram.com/hamid_waff" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 font-medium hover:text-gold transition-colors ml-1"

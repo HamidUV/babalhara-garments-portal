@@ -44,8 +44,8 @@ const Navbar = () => {
               className={cn(
                 "font-medium px-4 py-2 rounded-md transition-all duration-200",
                 location.pathname === path
-                  ? "text-gold bg-gray-200"
-                  : "text-black hover:text-gold hover:bg-gray-100"
+                  ? "text-gold"
+                  : "text-black hover:text-gold"
               )}
             >
               {['Home', 'About Us', 'Products', 'Contact'][index]}

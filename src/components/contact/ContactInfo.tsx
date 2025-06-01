@@ -31,14 +31,20 @@ const ContactInfo = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold mr-3">
-                    <Phone size={20} />
-                  </div>
-                  <h3 className="font-medium">Phone</h3>
-                </div>
-                <p className="text-gray-600">+971 50 859 9679</p>
-              </div>
+  <div className="flex items-center mb-4">
+    <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold mr-3">
+      <Phone size={20} />
+    </div>
+    <h3 className="font-medium">Phone</h3>
+  </div>
+  <p className="text-gray-600">
+    <span className="font-medium">Mobile:</span> +971 50 859 9679
+  </p>
+  <p className="text-gray-600">
+    <span className="font-medium">Landline:</span> (04) 552 2823
+  </p>
+</div>
+
               
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition-transform hover:-translate-y-1 duration-300">
                 <div className="flex items-center mb-4">

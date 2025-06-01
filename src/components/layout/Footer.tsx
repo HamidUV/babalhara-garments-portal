@@ -32,6 +32,7 @@ const Footer = () => {
             <div className="text-sm text-gray-600 mb-4">
               <p className="mb-2">babalhara.dubai@gmail.com</p>
               <p>+971 50 859 9679</p>
+              <p>(04) 552 2823</p>
             </div>
             
             {/* Social Media Links */}
@@ -72,7 +73,7 @@ const Footer = () => {
           <p className="mt-2 text-xs"> {/* Made text smaller */}
             Developed by 
             <a 
-              href="https://www.instagram.com/hamid_waff" 
+              href="http://hamid-portfolio.surge.sh/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 font-medium hover:text-gold transition-colors ml-1"
